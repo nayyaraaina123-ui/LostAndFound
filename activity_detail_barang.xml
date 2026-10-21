@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_page"
+    android:padding="20dp"
+    tools:context=".DetailBarangActivity">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <!-- Top Image Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_rounded_card"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/imgDetailHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sample_dompet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Category Tag Pill (Aligned to Left) -->
+            <TextView
+                android:id="@+id/tvCategoryPill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_pill_purple"
+                android:fontFamily="@font/archivo_black"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="✦ Dompet"
+                android:textColor="@color/bg_yellow"
+                android:textSize="18sp" />
+
+            <!-- Description Card Box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_rounded_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvDeskripsiDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tienne"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Dompet berwarna hitam, ditemukan disekitaran taman depan ruang guru, isinya ada 3 kartu dan sejumlah uang yang cukup banyak"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Note Pill Tag (Aligned to Left) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_pill_purple"
+                android:fontFamily="@font/archivo_black"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="Note !!"
+                android:textColor="@color/bg_yellow"
+                android:textSize="16sp" />
+
+            <!-- Note Box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_rounded_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvNoteDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tienne"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Haii, kalau mau ngambil dompetnya saya tunggu di depan gerbang habis pulang sekolah"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Main Action Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSudahDikembalikan"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_button_cyan"
+                android:fontFamily="@font/syne"
+                android:text="Sudah Dikembalikan"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
